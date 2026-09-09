@@ -1,0 +1,22 @@
+{
+  "configurations": [
+    {
+      "name": "linux-gcc-x64",
+      "includePath": [
+        "${workspaceFolder}/**"
+      ],
+      "defines": [
+        "USE_STDPERIPH_DRIVER",
+        "STM32F10X_MD"
+      ],
+      "compilerPath": "gcc",
+      "intelliSenseMode": "linux-gcc-x64",
+      "cStandard": "${default}",
+      "cppStandard": "${default}",
+      "browse": {
+        "limitSymbolsToIncludedHeaders": true
+      }
+    }
+  ],
+  "version": 4
+}

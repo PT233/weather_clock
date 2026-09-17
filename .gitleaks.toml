@@ -1,0 +1,19 @@
+title = "Weather clock secret scanning"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "seniverse-url-key"
+description = "Seniverse API key embedded in a URL"
+regex = '''(?i)seniverse\.com/[^\s"']*[?&]key=([a-z0-9_-]{10,})'''
+secretGroup = 1
+
+[[rules]]
+id = "weather-local-credential"
+description = "Hardcoded weather or Wi-Fi credential"
+regex = '''(?i)(?:#define\s+(?:wifi_password|weather_api_key)\s+|(?:wifi_password|weather_api_key)\s*=\s*)"([^"\r\n]{6,})"'''
+secretGroup = 1
+[[rules.allowlists]]
+regexTarget = "secret"
+regexes = ['''^YOUR_(?:WIFI_PASSWORD|SENIVERSE_API_KEY)$''']

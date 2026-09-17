@@ -14,16 +14,15 @@
 #include "stimage.h"
 #include "weather.h"
 #include "main.h"
+#include "config_local.h"
 
 
 /* WIFI名称 */
-//static const char *wifi_ssid = "";
-static const char *wifi_ssid = "";
+static const char *wifi_ssid = WIFI_SSID;
 /* WIFI密码 */
-//static const char *wifi_password = "";
-static const char *wifi_password = "";
+static const char *wifi_password = WIFI_PASSWORD;
 /* 心知天气获取本地天气的URL链接 */
-static const char *weather_url = "https://api.seniverse.com/v3/weather/now.json?key=&location=chengdu&language=en&unit=c";
+static const char *weather_url = "https://api.seniverse.com/v3/weather/now.json?key=" WEATHER_API_KEY "&location=chengdu&language=en&unit=c";
 
 /* 运行计数器，每1s自增1 */
 static uint32_t runms;

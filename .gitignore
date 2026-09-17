@@ -1,0 +1,13 @@
+# Local credentials
+/app/config_local.h
+.env
+.env.*
+*.env
+!.env.example
+
+# Keil generated output can contain credentials embedded in the firmware.
+/mdk/Objects/
+/mdk/Listings/
+/mdk/JLinkLog.txt
+/mdk/.vscode/*.log
+/mdk/.vscode/*.lock
